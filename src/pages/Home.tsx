@@ -18,7 +18,7 @@ const Home = () => {
             </h1>
           </div>
           <p className="text-xl mb-10 text-gray-600 dark:text-gray-300 animate-fadeIn animation-delay-300">{t.illuminatingDigitalSolutions}</p>
-          <Link to="/projects" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg inline-flex items-center transition-colors animate-pulse">
+          <Link to="/projects" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg inline-flex items-center transition-colors">
             {t.exploreProjects} <ArrowRight className="ml-2" />
           </Link>
         </div>
