@@ -1,38 +1,15 @@
-import React from 'react'
 import { motion } from 'framer-motion'
 import { useLanguage } from '../contexts/LanguageContext'
 import translations from '../translations/translations'
+import projectsData from '../data/projects.json'
 
 const Projects = () => {
   const { language } = useLanguage()
   const t = translations[language]
-
-  const projects = [
-    {
-      id: 1,
-      title: t.ecommercePlatform,
-      description: t.ecommercePlatformDesc,
-      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-      technologies: ['React', 'Node.js', 'MongoDB']
-    },
-    {
-      id: 2,
-      title: t.taskManagementApp,
-      description: t.taskManagementAppDesc,
-      image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-      technologies: ['Vue.js', 'Firebase', 'Tailwind CSS']
-    },
-    {
-      id: 3,
-      title: t.fitnessTrackingApp,
-      description: t.fitnessTrackingAppDesc,
-      image: 'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-      technologies: ['React Native', 'GraphQL', 'AWS']
-    }
-  ]
+  const projects = projectsData[language]
 
   return (
-    <div className="bg-background text-primary min-h-screen py-16 pt-24">
+    <div className="bg-background dark:bg-gray-900 text-primary dark:text-white min-h-screen py-16 pt-24">
       <div className="container mx-auto px-4">
         <motion.h1 
           className="text-4xl font-bayon mb-8 text-center"
@@ -46,7 +23,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <motion.div 
               key={project.id} 
-              className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer"
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden cursor-pointer"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -58,13 +35,13 @@ const Projects = () => {
             >
               <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
               <div className="p-6">
-                <h2 className="text-2xl font-bayon mb-2">{project.title}</h2>
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <h2 className="text-2xl font-noto mb-2 dark:text-white">{project.title}</h2>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
                 <div className="flex flex-wrap">
                   {project.technologies.map((tech, techIndex) => (
                     <motion.span 
                       key={techIndex} 
-                      className="bg-primary bg-opacity-10 text-primary text-sm font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded"
+                      className="bg-primary bg-opacity-10 dark:bg-opacity-20 text-primary dark:text-white text-sm font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded"
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.3, delay: index * 0.1 + techIndex * 0.05 }}

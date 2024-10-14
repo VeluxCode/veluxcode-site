@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, ReactNode } from 'react';
+import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
 
 type Language = 'en' | 'es';
 
@@ -10,7 +10,27 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguageState] = useState<Language>('en');
+
+  useEffect(() => {
+    const storedLanguage = localStorage.getItem('preferredLanguage') as Language | null;
+    if (storedLanguage) {
+      setLanguageState(storedLanguage);
+    } else {
+      const detectBrowserLanguage = (): Language => {
+        const browserLang = navigator.language.split('-')[0];
+        return browserLang === 'es' ? 'es' : 'en';
+      };
+      const defaultLanguage = detectBrowserLanguage();
+      setLanguageState(defaultLanguage);
+      localStorage.setItem('preferredLanguage', defaultLanguage);
+    }
+  }, []);
+
+  const setLanguage = (lang: Language) => {
+    setLanguageState(lang);
+    localStorage.setItem('preferredLanguage', lang);
+  };
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>

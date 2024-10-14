@@ -6,23 +6,26 @@ import Home from './pages/Home'
 import Projects from './pages/Projects'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import { LanguageProvider } from './contexts/LanguageContext'
+import { ThemeProvider } from './contexts/ThemeContext'
 
 function App() {
   return (
     <LanguageProvider>
-      <Router>
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
+      <ThemeProvider>
+        <Router>
+          <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 text-primary dark:text-white">
+            <Header />
+            <main className="flex-grow">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              </Routes>
+            </main>
+            <Footer />
+          </div>
+        </Router>
+      </ThemeProvider>
     </LanguageProvider>
   )
 }

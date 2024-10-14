@@ -1,0 +1,48 @@
+{
+  "en": [
+    {
+      "id": 1,
+      "title": "E-commerce Platform",
+      "description": "A fully-featured online store with secure payments and inventory management.",
+      "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "technologies": ["React", "Node.js", "MongoDB"]
+    },
+    {
+      "id": 2,
+      "title": "Task Management App",
+      "description": "A collaborative task management solution for teams of all sizes.",
+      "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "technologies": ["Vue.js", "Firebase", "Tailwind CSS"]
+    },
+    {
+      "id": 3,
+      "title": "Fitness Tracking Mobile App",
+      "description": "An iOS and Android app for tracking workouts and nutrition.",
+      "image": "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "technologies": ["React Native", "GraphQL", "AWS"]
+    }
+  ],
+  "es": [
+    {
+      "id": 1,
+      "title": "Plataforma de Comercio Electrónico",
+      "description": "Una tienda en línea completa con pagos seguros y gestión de inventario.",
+      "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "technologies": ["React", "Node.js", "MongoDB"]
+    },
+    {
+      "id": 2,
+      "title": "Aplicación de Gestión de Tareas",
+      "description": "Una solución colaborativa de gestión de tareas para equipos de todos los tamaños.",
+      "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "technologies": ["Vue.js", "Firebase", "Tailwind CSS"]
+    },
+    {
+      "id": 3,
+      "title": "Aplicación Móvil de Seguimiento de Fitness",
+      "description": "Una aplicación para iOS y Android para seguimiento de entrenamientos y nutrición.",
+      "image": "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "technologies": ["React Native", "GraphQL", "AWS"]
+    }
+  ]
+}
