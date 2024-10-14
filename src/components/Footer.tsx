@@ -1,5 +1,3 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
 import { Github, Linkedin, Mail } from 'lucide-react'
 import { useLanguage } from '../contexts/LanguageContext'
 import translations from '../translations/translations'
@@ -26,9 +24,6 @@ const Footer = () => {
               <Mail size={24} />
             </a>
           </div>
-        </div>
-        <div className="mt-4 text-center">
-          <Link to="/privacy-policy" className="hover:text-blue-300 transition-colors">{t.privacyPolicy}</Link>
         </div>
       </div>
     </footer>

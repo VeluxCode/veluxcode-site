@@ -8,7 +8,7 @@ const Home = () => {
   const t = translations[language]
 
   return (
-    <div className="bg-background dark:bg-gray-900 text-primary dark:text-white min-h-screen pt-20">
+    <div className="bg-background dark:bg-gray-900 text-primary dark:text-white pt-20">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16 animate-fadeIn">
           <div className="w-full max-w-4xl mx-auto mb-8">

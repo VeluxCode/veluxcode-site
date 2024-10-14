@@ -1,4 +1,3 @@
-import React from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 import translations from '../translations/translations'
 
@@ -7,7 +6,7 @@ const PrivacyPolicy = () => {
   const t = translations[language]
 
   return (
-    <div className="bg-background dark:bg-gray-900 text-primary dark:text-white min-h-screen py-16">
+    <div className="bg-background dark:bg-gray-900 text-primary dark:text-white min-h-screen py-24">
       <div className="container mx-auto px-4 max-w-3xl">
         <h1 className="text-4xl font-bold mb-8">{t.privacyPolicy}</h1>
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
